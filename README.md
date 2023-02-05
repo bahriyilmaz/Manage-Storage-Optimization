@@ -1,11 +1,3 @@
 # Manage-Storage-Optimization
 
-Identify large and unnecessary files taking up space on your Mac's hard drive.
-Delete cache files stored by the system and various applications.
-Clear
-Remove
-Uninstall applications that are no longer in use or needed.
-Optimize the hard drive by running the fsck_hfs tool.
-Empty the RAM cache and reset the
-Restart the Finder process to reflect the changes made.
-Verify that the storage space on your Mac has been optimized.
+Manage Storage Optimization with Terminal: A Guide to Improving Your Mac's Performance. This project provides an efficient way to manage your Mac's storage by using Terminal commands. The script is designed to perform various tasks, including deleting unnecessary files, clearing cache, and freeing up space. However, it's important to note that this project may not be suitable for technical novices and may cause issues if not used properly. By implementing this project, you can effectively optimize your storage and enhance the performance of your Mac.
