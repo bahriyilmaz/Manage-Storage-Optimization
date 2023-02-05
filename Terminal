@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Stop unnecessary system processes
+launchctl stop com.apple.apsd
+launchctl stop com.apple.AssistiveControl
+launchctl stop com.apple.sociald
+launchctl stop com.apple.icloud.fmfd
+
+# Remove cache files
+sudo rm -rf /Library/Caches/com.*
+sudo rm -rf /System/Library/Caches/com.*
+sudo rm -rf ~/Library/Caches
+
+# Flush DNS cache
+sudo dscacheutil -flushcache
+
+# Remove log files
+sudo rm -rf /private/var/log/*
+
+# Remove temporary files
+sudo rm -rf /private/var/tmp/*
+sudo rm -rf /private/var/folders/
+
+# Optimize the hard drive
+sudo fsck_hfs -fy /dev/disk0s2
+sudo trimforce enable
+
+# Disable transparency effects
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Disable system animations
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+echo "Optimization complete."
